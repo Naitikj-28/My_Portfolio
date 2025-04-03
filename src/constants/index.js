@@ -29,9 +29,9 @@ export const myProjects = [
     texture: '/textures/project/Project1.mp4',
     logo: '/assets/project-logo1.png',
     logoStyle: {
-      backgroundColor: '#2A1816',
-      border: '0.2px solid #36201D',
-      boxShadow: '0px 0px 60px 0px #AA3C304D',
+      backgroundColor: '#1E1E1E',
+      border: '0.2px solid #333333',
+      boxShadow: '0px 0px 60px 0px #FF57334D',
     },
     spotlight: '/assets/spotlight1.png',
     tags: [
@@ -59,9 +59,9 @@ export const myProjects = [
     texture: '/textures/project/Project2.mp4',
     logo: '/assets/project-logo2.png',
     logoStyle: {
-      backgroundColor: '#13202F',
-      border: '0.2px solid #17293E',
-      boxShadow: '0px 0px 60px 0px #2F6DB54D',
+      backgroundColor: '#0B3D91',
+      border: '0.2px solid #0E4DA5',
+      boxShadow: '0px 0px 60px 0px #1E90FF4D',
     },
     spotlight: '/assets/spotlight2.png',
     tags: [
@@ -80,7 +80,6 @@ export const myProjects = [
         name: 'JavaScript',
         path: '/assets/typescript.png',
       },
-      ,
       {
         id: 4,
         name: 'Google API',
@@ -95,11 +94,9 @@ export const myProjects = [
     texture: '/textures/project/Project3.mp4',
     logo: '/assets/project-logo3.png',
     logoStyle: {
-      backgroundColor: '#60f5a1',
-      background:
-        'linear-gradient(0deg, #60F5A150, #60F5A150), linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(208, 213, 221, 0.8) 100%)',
-      border: '0.2px solid rgba(208, 213, 221, 1)',
-      boxShadow: '0px 0px 60px 0px rgba(35, 131, 96, 0.3)',
+      backgroundColor: '#004225',
+      border: '0.2px solid #006837',
+      boxShadow: '0px 0px 60px 0px rgba(0, 255, 127, 0.3)',
     },
     spotlight: '/assets/spotlight3.png',
     tags: [
@@ -137,9 +134,9 @@ export const myProjects = [
     texture: '/textures/project/Project4.mp4',
     logo: '/assets/logoAcc.png',
     logoStyle: {
-      backgroundColor: '#0E1F38',
-      border: '0.2px solid #0E2D58',
-      boxShadow: '0px 0px 60px 0px #2F67B64D',
+      backgroundColor: '#1C1C1C',
+      border: '0.2px solid #363636',
+      boxShadow: '0px 0px 60px 0px #FFD7004D',
     },
     spotlight: '/assets/spotlight4.png',
     tags: [
@@ -160,7 +157,88 @@ export const myProjects = [
       }
     ],
   },
+  {
+    title: 'NJ Gaming_Zone',
+    desc: 'NJ Gaming Zone is a fun and engaging platform offering a variety of casual and normal-level games for all age groups.',
+    subdesc: 'Built with Next.js, it provides a smooth and responsive gaming experience with easy navigation and interactive gameplay.',
+    texture: '/textures/project/Project5.mp4',
+    logo: '/assets/project-logo5.png',
+    logoStyle: {
+      backgroundColor: '#3B0A45',
+      border: '0.2px solid #5A0E6A',
+      boxShadow: '0px 0px 60px 0px #BA55D34D',
+    },
+    spotlight: '/assets/spotlight1.png',
+    tags: [
+      {
+        id: 1,
+        name: 'Next JS',
+        path: '/assets/nextjs.png',
+      },
+      {
+        id: 2,
+        name: 'CSS',
+        path: 'assets/tailwindcss.png',
+      },
+      {
+        id: 3,
+        name: 'JavaScript',
+        path: '/assets/typescript.png',
+      },
+      {
+        id: 4,
+        name: 'React.js',
+        path: '/assets/react.svg',
+      },
+    ],
+  },
+  {
+    title: 'IUWM Dashboard',
+    desc: 'An interactive React-based dashboard for urban water management and flood risk assessment. Integrates 3D visualization, real-time mapping, and analytical tools for smart city planning.',
+    subdesc: 'Enables flood risk prediction and urban water resource monitoring using GIS data. Generates PDF reports with map overlays, ensuring accurate data visualization.',
+    texture: '/textures/project/Project6.mp4',
+    logo: '/assets/logoAcc.png',
+    logoStyle: {
+      backgroundColor: '#012E40',
+      border: '0.2px solid #014F60',
+      boxShadow: '0px 0px 60px 0px #00CED14D',
+    },
+    spotlight: '/assets/spotlight3.png',
+    tags: [
+      {
+        id: 1,
+        name: 'React.js',
+        path: '/assets/react.svg',
+      },
+      {
+        id: 2,
+        name: 'CSS',
+        path: 'assets/tailwindcss.png',
+      },
+      {
+        id: 3,
+        name: 'JavaScript',
+        path: '/assets/typescript.png',
+      },
+      {
+        id: 4,
+        name: 'Node JS',
+        path: '/assets/framer.png',
+      },
+      {
+        id: 5,
+        name: 'Google API',
+        path: '/assets/API.png',
+      },
+      {
+        id: 6,
+        name: 'GeoServer',
+        path: '/assets/Geoserver.png',
+      },
+    ],
+  },
 ];
+
 
 export const calculateSizes = (isSmall, isMobile, isTablet) => {
   return {
@@ -177,9 +255,9 @@ export const workExperiences = [
   {
     id: 1,
     name: 'AccionLAND PRIVATE LIMITED',
-    pos: 'Frontend Developer Intern',
+    pos: 'Frontend Web Developer Intern',
     duration: '2023 - Present',
-    title: "As a Frontend Developer, I specialize in creating responsive and interactive user interfaces using modern web technologies. My work involves transforming designs into functional, user-friendly applications while ensuring cross-browser compatibility and performance optimization. I collaborate closely with designers and backend developers to deliver seamless experiences that meet user needs and project goals.",
+    title: "As a Frontend Web Developer, I specialize in creating responsive and interactive user interfaces using modern web technologies. My work involves transforming designs into functional, user-friendly applications while ensuring cross-browser compatibility and performance optimization. I collaborate closely with designers and backend developers to deliver seamless experiences that meet user needs and project goals.",
     icon: '/assets/logoAcc.svg',
     animation: 'idle',
   }

@@ -14,7 +14,7 @@ const Contact = () => {
                         <a href="/assets/Naitik_Jain_CV.pdf" download className="field-btn">
                             Download CV
                         </a>
-                        <a href="/assets/Naitik_Jain_Resume.pdf" download className="field-btn">
+                        <a href="/assets/NaitikJain_Resume.pdf" download className="field-btn">
                             Download Resume
                         </a>
                     </div>

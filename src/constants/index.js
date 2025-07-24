@@ -255,10 +255,20 @@ export const workExperiences = [
   {
     id: 1,
     name: 'AccionLAND PRIVATE LIMITED',
-    pos: 'Frontend Web Developer Intern',
-    duration: '2023 - Present',
-    title: "As a Frontend Web Developer, I specialize in creating responsive and interactive user interfaces using modern web technologies. My work involves transforming designs into functional, user-friendly applications while ensuring cross-browser compatibility and performance optimization. I collaborate closely with designers and backend developers to deliver seamless experiences that meet user needs and project goals.",
+    duration: 'Sep 2023 – Present',
     icon: '/assets/logoAcc.svg',
     animation: 'idle',
+    roles: [
+      {
+        pos: 'Frontend Web Developer Intern',
+        duration: 'Sep 2023 – Feb 2025',
+        title: 'Worked on building responsive UIs using HTML, CSS, JavaScript, and React.js. Improved performance and accessibility, and collaborated with cross-functional teams.',
+      },
+      {
+        pos: 'Frontend Web Developer',
+        duration: 'Mar 2025 – Present',
+        title: 'Promoted to full-time role focused on delivering scalable frontend architectures. Led development of new features, optimized codebase for better maintainability, and contributed to UI/UX improvements across projects.',
+      }
+    ]
   }
 ];

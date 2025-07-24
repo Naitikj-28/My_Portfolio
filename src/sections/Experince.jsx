@@ -1,9 +1,4 @@
-import { Suspense, useState } from 'react';
-import { Canvas } from '@react-three/fiber';
-import { OrbitControls } from '@react-three/drei';
-
-import Developer from '../components/Developer.jsx';
-import CanvasLoader from '../components/Loading.jsx';
+import { useState } from 'react';
 import { workExperiences } from '../constants/index.js';
 
 const WorkExperience = () => {
@@ -12,49 +7,45 @@ const WorkExperience = () => {
     return (
         <section className="c-space my-20" id="work">
             <div className="w-full text-white-600">
-                <p className="head-text">My Work Experience</p>
+                <p className="head-text text-3xl font-extrabold mb-10">My Work Experience</p>
 
-                <div className="work-container">
-                    <div className="work-canvas">
-                        <Canvas>
-                            <ambientLight intensity={7} />
-                            <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
-                            <directionalLight position={[10, 10, 10]} intensity={1} />
-                            <OrbitControls enableZoom={false} maxPolarAngle={Math.PI / 2} />
-
-                            <Suspense fallback={<CanvasLoader />}>
-                                <Developer position-y={-3} scale={3} animationName={animationName} />
-                            </Suspense>
-                        </Canvas>
-                    </div>
-
-                    <div className="work-content">
-                        <div className="sm:py-10 py-5 sm:px-5 px-2.5" >
-                            {workExperiences.map((item, index) => (
-                                <div
-                                    key={index}
-                                    onClick={() => setAnimationName(item.animation.toLowerCase())}
-                                    onPointerOver={() => setAnimationName(item.animation.toLowerCase())}
-                                    onPointerOut={() => setAnimationName('idle')}
-                                    className="work-content_container group">
-                                    <div className="flex flex-col h-full justify-start items-center py-2">
-                                        <div className="work-content_logo">
-                                            <img className="w-full h-full" src={item.icon} alt="" />
-                                        </div>
-
-                                        <div className="work-content_bar" />
+                <div className="work-content w-full">
+                    <div className="sm:py-10 py-5 sm:px-5 px-2.5">
+                        {workExperiences.map((company, index) => (
+                            <div key={index} className="work-content_container group">
+                                {/* Company & Roles */}
+                                <div className="flex flex-col sm:flex-row gap-5 items-start py-2">
+                                    <div className="work-content_logo shrink-0">
+                                        <img className="w-16 h-16 object-contain" src={company.icon} alt={company.name} />
                                     </div>
 
-                                    <div className="sm:p-5 px-2.5 py-5">
-                                        <p className="font-bold text-white-800">{item.name}</p>
-                                        <p className="text-sm mb-5">
-                                            {item.pos} -- <span>{item.duration}</span>
-                                        </p>
-                                        <p className="group-hover:text-white transition-all ease-in-out duration-500">{item.title}</p>
+                                    <div className="flex flex-col w-full">
+                                        <p className="font-bold text-white-800 text-2xl">{company.name}</p>
+                                        <p className="text-base text-white-500 mb-4">{company.duration}</p>
+
+                                        {company.roles.map((role, rIndex) => (
+                                            <div
+                                                key={rIndex}
+                                                className="mb-6 cursor-pointer"
+                                                onClick={() => setAnimationName(company.animation.toLowerCase())}
+                                                onPointerOver={() => setAnimationName(company.animation.toLowerCase())}
+                                                onPointerOut={() => setAnimationName('idle')}
+                                            >
+                                                <p className="font-semibold text-white-700 text-xl">
+                                                    {role.pos}{' '}
+                                                    <span className="text-white-500 text-base">({role.duration})</span>
+                                                </p>
+                                                <p className="text-white-400 text-base group-hover:text-white transition-all ease-in-out duration-500 mt-2 leading-relaxed">
+                                                    {role.title}
+                                                </p>
+                                            </div>
+                                        ))}
                                     </div>
                                 </div>
-                            ))}
-                        </div>
+
+                                <hr className="my-6 border-white-300/20" />
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>

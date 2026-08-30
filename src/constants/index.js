@@ -254,7 +254,7 @@ export const calculateSizes = (isSmall, isMobile, isTablet) => {
 export const workExperiences = [
   {
     id: 1,
-    name: 'Empower Fintech Private Limited (MedsCred)',
+    name: 'MedsCred',
     duration: 'Nov 2025 – Present',
     icon: '/assets/MedscredLogo.svg',
     animation: 'salute',

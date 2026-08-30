@@ -35,7 +35,7 @@ const Hero = () => {
             <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#527A55]" />
           </span>
           <span className="text-xs sm:text-sm font-semibold text-[#1F2922]">
-            Frontend Developer &bull; Empower Fintech (MedsCred)
+            Frontend Developer &bull; MedsCred
           </span>
         </div>
 

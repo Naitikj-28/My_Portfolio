@@ -1,10 +1,11 @@
+'use client';
 import { useGLTF, useTexture } from '@react-three/drei';
 
 export default function HackerRoom(props) {
     const { nodes, materials } = useGLTF('/models/hacker-room.glb');
 
-    const monitortxt = useTexture('textures/desk/monitor.png');
-    const screenTxt = useTexture('textures/desk/screen1.png');
+    const monitortxt = useTexture('/textures/desk/monitor.png');
+    const screenTxt = useTexture('/textures/desk/screen1.png');
 
     return (
         <group {...props} dispose={null}>
@@ -32,4 +33,6 @@ export default function HackerRoom(props) {
     );
 }
 
-useGLTF.preload('/models/hacker-room.glb');
+if (typeof window !== 'undefined') {
+    useGLTF.preload('/models/hacker-room.glb');
+}

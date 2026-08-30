@@ -43,7 +43,7 @@ export const myProjects = [
       {
         id: 2,
         name: 'CSS',
-        path: 'assets/tailwindcss.png',
+        path: '/assets/tailwindcss.png',
       },
       {
         id: 3,
@@ -73,7 +73,7 @@ export const myProjects = [
       {
         id: 2,
         name: 'CSS',
-        path: 'assets/tailwindcss.png',
+        path: '/assets/tailwindcss.png',
       },
       {
         id: 3,
@@ -108,7 +108,7 @@ export const myProjects = [
       {
         id: 2,
         name: 'CSS',
-        path: 'assets/tailwindcss.png',
+        path: '/assets/tailwindcss.png',
       },
       {
         id: 3,
@@ -148,7 +148,7 @@ export const myProjects = [
       {
         id: 2,
         name: 'CSS',
-        path: 'assets/tailwindcss.png',
+        path: '/assets/tailwindcss.png',
       },
       {
         id: 3,
@@ -178,7 +178,7 @@ export const myProjects = [
       {
         id: 2,
         name: 'CSS',
-        path: 'assets/tailwindcss.png',
+        path: '/assets/tailwindcss.png',
       },
       {
         id: 3,
@@ -213,7 +213,7 @@ export const myProjects = [
       {
         id: 2,
         name: 'CSS',
-        path: 'assets/tailwindcss.png',
+        path: '/assets/tailwindcss.png',
       },
       {
         id: 3,
@@ -242,32 +242,46 @@ export const myProjects = [
 
 export const calculateSizes = (isSmall, isMobile, isTablet) => {
   return {
-    deskScale: isSmall ? 0.05 : isMobile ? 0.06 : 0.065,
-    deskPosition: isMobile ? [0.5, -4.5, 0] : [0.25, -5.5, 0],
-    cubePosition: isSmall ? [4, -5, 0] : isMobile ? [5, -5, 0] : isTablet ? [5, -5, 0] : [9, -5.5, 0],
+    deskScale: isSmall ? 0.048 : isMobile ? 0.055 : 0.06,
+    deskPosition: isMobile ? [0.5, -6.0, 0] : [0.25, -7.6, 0],
+    cubePosition: isSmall ? [4, -5.5, 0] : isMobile ? [5, -5.5, 0] : isTablet ? [5, -5.5, 0] : [9, -6.5, 0],
     reactLogoPosition: isSmall ? [3, 4, 0] : isMobile ? [5, 4, 0] : isTablet ? [5, 4, 0] : [12, 3, 0],
     ringPosition: isSmall ? [-5, 7, 0] : isMobile ? [-10, 10, 0] : isTablet ? [-12, 10, 0] : [-24, 10, 0],
-    targetPosition: isSmall ? [-5, -10, -10] : isMobile ? [-9, -10, -10] : isTablet ? [-11, -7, -10] : [-13, -13, -10],
+    targetPosition: isSmall ? [-5, -10.5, -10] : isMobile ? [-9, -10.5, -10] : isTablet ? [-11, -7.5, -10] : [-13, -13.5, -10],
   };
 };
 
 export const workExperiences = [
   {
     id: 1,
-    name: 'AccionLAND PRIVATE LIMITED',
-    duration: 'Sep 2023 – Present',
+    name: 'MedsCred',
+    duration: 'Nov 2025 – Present',
+    icon: '/assets/MedscredLogo.svg',
+    animation: 'salute',
+    roles: [
+      {
+        pos: 'Frontend Developer',
+        duration: 'Nov 2025 – Present',
+        title: 'Working on multiple live portals on a healthcare fintech platform — each an independent workflow-driven module. Architected multi-step form flows with complex conditional logic, field-level validations, and dynamic section rendering based on user role and input state. Implemented granular role-based access control (RBAC), developed reusable UI component libraries, and integrated REST APIs with optimistic UI patterns.',
+      }
+    ]
+  },
+  {
+    id: 2,
+    name: 'AccionLAND Private Limited',
+    duration: 'Sep 2023 – Oct 2025',
     icon: '/assets/logoAcc.svg',
     animation: 'idle',
     roles: [
       {
-        pos: 'Frontend Web Developer Intern',
-        duration: 'Sep 2023 – Feb 2025',
-        title: 'Worked on building responsive UIs using HTML, CSS, JavaScript, and React.js. Improved performance and accessibility, and collaborated with cross-functional teams.',
+        pos: 'Frontend Web Developer',
+        duration: 'Mar 2025 – Oct 2025',
+        title: 'Led frontend development of large-scale internal portals (EazeURBAN, CWIN) with multi-role dashboards serving urban planning and water network operations. Built a city-level safety dashboard (EazeURBAN) integrating QGIS 3D city models, rainfall prediction models, and GeoServer map layers with accurate geospatial symbology in collaboration with NIUA.',
       },
       {
-        pos: 'Frontend Web Developer',
-        duration: 'Mar 2025 – Present',
-        title: 'Promoted to full-time role focused on delivering scalable frontend architectures. Led development of new features, optimized codebase for better maintainability, and contributed to UI/UX improvements across projects.',
+        pos: 'Frontend Developer Intern',
+        duration: 'Sep 2023 – Feb 2025',
+        title: 'Built geospatial dashboards from scratch — FloodLab (real-time flood zone monitoring), Water Reservoir Watch (live + historical reservoir data with forecasting), and DroneQuote (drone survey cost estimator). Integrated GeoServer and Leaflet.js for real-time geospatial data layer rendering with time-based controls and interactive filtering.',
       }
     ]
   }

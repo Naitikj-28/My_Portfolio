@@ -1,3 +1,4 @@
+'use client';
 import { useRef, useEffect } from 'react';
 import { useGLTF, useAnimations, useVideoTexture } from '@react-three/drei';
 import gsap from 'gsap';
@@ -8,7 +9,12 @@ const DemoComputer = (props) => {
     const { nodes, materials, animations } = useGLTF('/models/computer.glb');
     const { actions } = useAnimations(animations, group);
 
-    const txt = useVideoTexture(props.texture ? props.texture : '/textures/project/project1.mp4');
+    const txt = useVideoTexture(props.texture ? props.texture : '/textures/project/Project1.mp4', {
+        loop: true,
+        muted: true,
+        playsInline: true,
+        start: true,
+    });
 
     useEffect(() => {
         if (txt) {
@@ -17,6 +23,7 @@ const DemoComputer = (props) => {
     }, [txt]);
 
     useGSAP(() => {
+        if (!group.current) return;
         gsap.from(group.current.rotation, {
             y: Math.PI / 2,
             duration: 1,
@@ -1007,6 +1014,8 @@ const DemoComputer = (props) => {
     );
 };
 
-useGLTF.preload('/models/computer.glb');
+if (typeof window !== 'undefined') {
+    useGLTF.preload('/models/computer.glb');
+}
 
 export default DemoComputer;

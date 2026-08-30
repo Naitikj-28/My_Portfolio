@@ -1,3 +1,4 @@
+'use client';
 import React, { useEffect, useRef } from 'react';
 import { useGraph } from '@react-three/fiber';
 import { useAnimations, useFBX, useGLTF } from '@react-three/drei';
@@ -98,6 +99,8 @@ const Developer = ({ animationName = 'idle', ...props }) => {
         </group>
     );
 };
-useGLTF.preload('/models/animations/developer.glb');
+if (typeof window !== 'undefined') {
+    useGLTF.preload('/models/animations/developer.glb');
+}
 
 export default Developer;

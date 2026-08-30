@@ -1,3 +1,4 @@
+'use client';
 import { useGSAP } from '@gsap/react';
 import { Center, useTexture } from '@react-three/drei';
 import gsap from 'gsap';
@@ -11,7 +12,7 @@ const Rings = ({ position }) => {
         }
     }, []);
 
-    const texture = useTexture('textures/rings.png');
+    const texture = useTexture('/textures/rings.png');
 
     useGSAP(
         () => {

@@ -1,17 +1,19 @@
+'use client';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { useRef, useState } from 'react';
 import { Float, useGLTF, useTexture } from '@react-three/drei';
 
 const Cube = ({ ...props }) => {
-    const { nodes } = useGLTF('models/cube.glb');
+    const { nodes } = useGLTF('/models/cube.glb');
 
-    const texture = useTexture('textures/cube.png');
+    const texture = useTexture('/textures/cube.png');
 
     const cubeRef = useRef();
     const [hovered, setHovered] = useState(false);
 
     useGSAP(() => {
+        if (!cubeRef.current) return;
         gsap
             .timeline({
                 repeat: -1,
@@ -44,6 +46,8 @@ const Cube = ({ ...props }) => {
     );
 };
 
-useGLTF.preload('models/cube.glb');
+if (typeof window !== 'undefined') {
+    useGLTF.preload('/models/cube.glb');
+}
 
 export default Cube;
